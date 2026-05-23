@@ -322,7 +322,8 @@ std::string MakeJsonResponse(const http::HttpRequest& request,
                              http::HttpStatus status,
                              json::ValueBuilder builder) {
   request.SetResponseStatus(status);
-  request.GetHttpResponse().SetHeader("Content-Type", "application/json");
+  request.GetHttpResponse().SetHeader(std::string_view{"Content-Type"},
+                                      std::string{"application/json"});
   return json::ToString(builder.ExtractValue());
 }
 

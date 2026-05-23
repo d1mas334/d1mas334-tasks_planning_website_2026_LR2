@@ -16,7 +16,7 @@
 
 ## Технологии
 
-- C++17;
+- C++20;
 - Yandex Userver;
 - REST API;
 - in-memory storage на `std::unordered_map` и `std::vector`;
